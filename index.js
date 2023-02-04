@@ -9,7 +9,7 @@ const guessNumber = {};
 
 const startGame = async (chatId) => {
     await bot.sendSticker(chatId, 'https://tlgrm.ru/_/stickers/8d7/6f1/8d76f159-6795-37fd-8c64-04e195af9c61/5.webp');
-    await bot.sendMessage(chatId, 'You wanna play a game? Alright, alright. Now I will guess a number from 1 to 9 for you, and you have to guess it.')
+    await bot.sendMessage(chatId, 'You wanna play a game? Alright, alright. Now I will guess a number from 0 to 9 for you, and you have to guess it.')
     const randomNumber = Math.floor(Math.random() * 10);
     guessNumber[chatId] = randomNumber;
     await bot.sendMessage(chatId, 'Guess the number', gameOptions);
